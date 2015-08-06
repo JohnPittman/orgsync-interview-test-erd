@@ -7,3 +7,4 @@ positives and negatives of your approach.
 Assumptions:
 
  - No code.
+ - Basic recurring intervals vs special cases ex. "last Thursday of every other month."
