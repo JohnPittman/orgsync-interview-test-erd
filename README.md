@@ -8,3 +8,4 @@ Assumptions:
 
  - No code.
  - Basic recurring intervals vs special cases ex. "last Thursday of every other month."
+ - Basic tables to prove concept vs entire application ex. message handling and notifications.
