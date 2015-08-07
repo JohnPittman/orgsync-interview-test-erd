@@ -4,13 +4,13 @@ Provide an ERD showing the new database tables/fields necessary to implement thi
 feature. Then, briefly describe how your model handles recurring events including the
 positives and negatives of your approach.
 
-Assumptions:
+#Assumptions
 
  - No code.
  - Basic recurring intervals vs special cases ex. "last Thursday of every other month."
  - Basic tables to prove concept vs entire application ex. message handling and notifications.
 
-How it works:
+#How it works
 
 - When a user creates an event the event data gets saved to the Events table. I left it as a not user is tied to an event directly in the Events tables but instead an EventRSVP is created for the user that created the event with the role of "Host" and RSVPType of "Going." The fields for the role and RSVPType is an Id that has been normalized to it's own EventRoles/EventRSVPTypes tables for less redundancy. (not completely necessary)
 - Recurring is implemented here as a way to add multiple recurring times per an event. When an event ends the EventIntervals table will be parsed for the current ending event Id and gather all intervals available. 
@@ -19,3 +19,11 @@ How it works:
 - If you would want to keep records of everyone that went to each recurring event forever there would need to be some changes like creating a past events table or something of the sort to link RSVPs to. 
 - Everything is always up for some good discussion and brain expansion since this was done quite quickly.
 
+#Installation
+
+- git clone https://github.com/JohnPittman/orgsync-interview-test-erd.git
+
+#Contents
+
+- events-erd.png: exported image of the ERD from MySQL Workbench.
+- orgsync-events.mwb: MySQL Workbench original file.
